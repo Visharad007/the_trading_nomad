@@ -1,155 +1,932 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Investment Plans | Visharad Forex</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Investment Plans | The Trading Nomad</title>
+  <link rel="stylesheet" href="css/plans.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">The Trading Nomad</div>
+  <!-- Animated Background -->
+  <div class="particles" id="particles-js"></div>
+  
+  <!-- Navigation -->
+  <header class="glass-nav">
+    <div class="logo">
+      <img src="images/logo.png" alt="The Trading Nomad Logo" class="logo-img">
+      <span class="logo-text">The Trading Nomad</span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="plans.html" class="active">Plans</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="#" class="nav-cta">Client Login</a></li>
       </ul>
+      <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
     </nav>
   </header>
 
-  <!-- Page Header -->
-  <section class="plans-header">
-    <h1>Explore Investment Plans</h1>
-    <p>Select the plan that suits your financial goals.</p>
-  </section>
-
-  <!-- Plans Section (Plan A Card) -->
-<section class="plans-section">
-  <div class="plan-card">
-    <div class="plan-icon"><i class="fas fa-chart-line"></i></div>
-    <h2>Wealth Kickstart</h2>
-    <p class="placeholder">Earn steady monthly returns while getting your capital back safely over 20 months.</p>
-    <a href="javascript:void(0)" class="plan-btn" onclick="openPlanAModal()">Get Started</a>
-  </div>
-
-  <div class="plan-card">
-    <div class="plan-icon"><i class="fas fa-coins"></i></div>
-    <h2>Premium Growth</h2>
-    <p class="placeholder">A high-growth plan offering steady monthly returns with the added security of full capital return at the end of the term.</p>
-    <button onclick="openModal('planBModal')" class="plan-button">Get Started</button>
-
-  </div>
-</section>
-
-<!-- Modal for Plan A -->
-<div id="planAModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closePlanAModal()">&times;</span>
-    <h2>Plan A: Wealth Kickstart</h2>
-    <p><strong>Minimum Investment:</strong> ₹1,00,000</p>
-    <h3>Monthly Return Structure</h3>
-    <ul class="modal-points">
-      <li><strong>Interest:</strong> Earn 2% (₹2,000 on a ₹1,00,000 investment) every month.</li>
-      <li><strong>Capital Return:</strong> Receive an additional 5% (₹5,000) of your initial capital monthly.</li>
-    </ul>
-    <p><strong>Total Monthly Payment:</strong> A combined sum of ₹7,000 is credited every month.</p>
-    <p>This amount will be paid for 20 consecutive months, ensuring that by the end of the term your total returns equal ₹1,40,000 – which includes both your monthly earnings and the gradual return of your initial investment.</p>
-    <p><strong>Key Benefits:</strong></p>
-    <ul class="modal-points">
-      <li>Regular monthly returns combining interest earnings with a systematic capital recovery.</li>
-      <li>Enhanced liquidity – receive a portion of your investment back each month.</li>
-      <li>At the conclusion of 20 months, your full principal investment is safely returned along with the accrued returns.</li>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <div class="logo">
+        <img src="images/logo.png" alt="The Trading Nomad Logo">
+        <span>The Trading Nomad</span>
+      </div>
+      <div class="close-menu-btn">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="plans.html" class="active"><i class="fas fa-chart-line"></i> Plans</a></li>
+      <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      <li><a href="#" class="nav-cta"><i class="fas fa-user"></i> Client Login</a></li>
     </ul>
   </div>
-</div>
 
-<!-- Plan B Modal -->
-<div id="planBModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closePlanBModal()">&times;</span>
-    <h2>Plan B – Premium Growth</h2>
-    <p><strong>Minimum Investment:</strong> ₹1,00,000</p>
-    <p>
-      In this plan, you will receive a <strong>3% return on your invested amount every month</strong> for a total duration of <strong>18 months</strong>.
-      That means, for an investment of ₹1,00,000, you will receive ₹3,000 monthly.
-    </p>
-    <p>
-      Over 18 months, this totals to ₹54,000 in returns. At the end of the 18-month term, you will also receive your entire capital of ₹1,00,000 back.
-    </p>
-    <p>
-      <strong>Note:</strong> There is a <strong>lock-in period of 12 months</strong>. You cannot withdraw your capital before completing 12 months.
-    </p>
-    <ul style="margin-top: 15px; line-height: 1.8;">
-      <li><strong>Monthly Return:</strong> ₹3,000 (3%)</li>
-      <li><strong>Duration:</strong> 18 months</li>
-      <li><strong>Total Return:</strong> ₹54,000 + Full Capital Returned at End</li>
-      <li><strong>Key Benefit:</strong> Over 50% ROI with capital safety</li>
-      <li><strong>Lock-in Period:</strong> 12 months minimum</li>
-    </ul>
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="plans-hero">
+      <div class="hero-content">
+        <h1 class="gradient-text">Premium <span>Investment</span> Solutions</h1>
+        <p class="hero-subtitle">Maximize your returns with our expertly crafted investment plans</p>
+        <div class="hero-cta">
+          <button class="btn-primary" onclick="openPlanAModal()">
+            <i class="fas fa-chart-pie"></i> View Top Plan
+          </button>
+          <a href="#calculator" class="btn-secondary">
+            <i class="fas fa-calculator"></i> Calculate Returns
+          </a>
+        </div>
+        <div class="scroll-indicator">
+          <span></span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/investment-hero.png" alt="Investment growth chart">
+      </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="stat-content">
+          <h3 data-count="2500">0</h3>
+          <p>Active Investors</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-rupee-sign"></i>
+        </div>
+        <div class="stat-content">
+          <h3 data-count="85">0</h3>
+          <p>Crore+ Invested</p>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-icon">
+          <i class="fas fa-percentage"></i>
+        </div>
+        <div class="stat-content">
+          <h3 data-count="98">0</h3>
+          <p>Success Rate</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans Grid -->
+    <section class="plans-grid-section">
+      <div class="section-header">
+        <h2>Our <span>Investment</span> Plans</h2>
+        <p>Choose the perfect plan for your financial goals</p>
+      </div>
+      
+      <div class="plans-grid">
+        <!-- Plan 1 -->
+        <div class="plan-card" data-plan="wealth">
+          <div class="plan-shine"></div>
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Wealth Kickstart</h3>
+            <div class="plan-tag">Most Popular</div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check-circle"></i> 2% Monthly Interest</li>
+              <li><i class="fas fa-check-circle"></i> 5% Capital Return Monthly</li>
+              <li><i class="fas fa-check-circle"></i> 20 Month Term</li>
+              <li><i class="fas fa-check-circle"></i> ₹1,00,000 Minimum</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-returns">
+              <span>Projected Returns</span>
+              <strong>₹1,40,000</strong>
+            </div>
+            <button class="plan-cta" onclick="openPlanAModal()">
+              <i class="fas fa-arrow-right"></i> Explore Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan-card" data-plan="premium">
+          <div class="plan-shine"></div>
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="fas fa-gem"></i>
+            </div>
+            <h3>Premium Growth</h3>
+            <div class="plan-tag elite">High ROI</div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check-circle"></i> 3% Monthly Interest</li>
+              <li><i class="fas fa-check-circle"></i> Full Capital Return</li>
+              <li><i class="fas fa-check-circle"></i> 18 Month Term</li>
+              <li><i class="fas fa-check-circle"></i> 12 Month Lock-in</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-returns">
+              <span>Projected Returns</span>
+              <strong>₹1,54,000</strong>
+            </div>
+            <button class="plan-cta" onclick="openPlanBModal()">
+              <i class="fas fa-arrow-right"></i> Explore Plan
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan-card" data-plan="vip">
+          <div class="plan-shine"></div>
+          <div class="plan-header">
+            <div class="plan-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <h3>VIP Accelerator</h3>
+            <div class="plan-tag vip">Exclusive</div>
+          </div>
+          <div class="plan-features">
+            <ul>
+              <li><i class="fas fa-check-circle"></i> 4% Monthly Interest</li>
+              <li><i class="fas fa-check-circle"></i> Quarterly Bonuses</li>
+              <li><i class="fas fa-check-circle"></i> 24 Month Term</li>
+              <li><i class="fas fa-check-circle"></i> Dedicated Manager</li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-returns">
+              <span>Projected Returns</span>
+              <strong>₹1,92,000</strong>
+            </div>
+            <button class="plan-cta" onclick="openPlanCModal()">
+              <i class="fas fa-arrow-right"></i> Explore Plan
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investment Calculator -->
+    <section class="calculator-section" id="calculator">
+      <div class="section-header">
+        <h2>Investment <span>Calculator</span></h2>
+        <p>Estimate your potential returns with our interactive calculator</p>
+      </div>
+      
+      <div class="calculator-container">
+        <div class="calculator-inputs">
+          <div class="input-group">
+            <label for="investmentAmount">Investment Amount (₹)</label>
+            <input type="range" id="investmentAmount" min="100000" max="5000000" step="50000" value="100000">
+            <div class="amount-display">
+              <span id="amountDisplay">₹1,00,000</span>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="planSelect">Select Plan</label>
+            <select id="planSelect">
+              <option value="planA">Wealth Kickstart</option>
+              <option value="planB">Premium Growth</option>
+              <option value="planC">VIP Accelerator</option>
+            </select>
+          </div>
+          
+          <div class="input-group">
+            <label for="investmentDuration">Custom Duration (Months)</label>
+            <input type="range" id="investmentDuration" min="6" max="36" step="1" value="18">
+            <div class="duration-display">
+              <span id="durationDisplay">18 Months</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="calculator-results">
+          <h3>Projected Returns</h3>
+          <div class="results-grid" id="calculatorResults">
+            <!-- JS will populate this -->
+          </div>
+          <button class="btn-primary invest-now-btn" onclick="openSelectedPlanModal()">
+            <i class="fas fa-paper-plane"></i> Invest Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+      <div class="section-header">
+        <h2>Plan <span>Comparison</span></h2>
+        <p>Detailed breakdown of all plan features</p>
+      </div>
+      
+      <div class="comparison-table-container">
+        <div class="table-scroll">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Wealth Kickstart</th>
+                <th>Premium Growth</th>
+                <th>VIP Accelerator</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Return</td>
+                <td>2% + 5% Capital</td>
+                <td>3%</td>
+                <td>4% + Bonuses</td>
+              </tr>
+              <tr>
+                <td>Term Length</td>
+                <td>20 Months</td>
+                <td>18 Months</td>
+                <td>24 Months</td>
+              </tr>
+              <tr>
+                <td>Minimum Investment</td>
+                <td>₹1,00,000</td>
+                <td>₹1,00,000</td>
+                <td>₹2,50,000</td>
+              </tr>
+              <tr>
+                <td>Capital Return</td>
+                <td>Monthly</td>
+                <td>End of Term</td>
+                <td>End of Term</td>
+              </tr>
+              <tr>
+                <td>Lock-in Period</td>
+                <td>None</td>
+                <td>12 Months</td>
+                <td>18 Months</td>
+              </tr>
+              <tr>
+                <td>Total Returns*</td>
+                <td>₹1,40,000</td>
+                <td>₹1,54,000</td>
+                <td>₹1,92,000</td>
+              </tr>
+              <tr>
+                <td>Support</td>
+                <td>Standard</td>
+                <td>Priority</td>
+                <td>Dedicated Manager</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="disclaimer">*Calculated on minimum investment amount. Actual returns may vary based on market conditions.</p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+      <div class="section-header">
+        <h2>Investor <span>Success</span> Stories</h2>
+        <p>Hear from our satisfied investors</p>
+      </div>
+      
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">I've been investing with The Trading Nomad for 2 years now. The Wealth Kickstart plan helped me generate consistent monthly income while preserving my capital. Highly recommended!</p>
+            <div class="testimonial-author">
+              <img src="images/client1.jpg" alt="Rajesh Kumar">
+              <div class="author-info">
+                <h4>Rajesh Kumar</h4>
+                <p>Mumbai, Investor since 2021</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <div class="quote-icon">
+              <i class="fas fa-quote-left"></i>
+            </div>
+            <p class="testimonial-text">The VIP Accelerator plan exceeded my expectations. My dedicated manager helped me optimize my investment strategy, resulting in 22% higher returns than projected!</p>
+            <div class="testimonial-author">
+              <img src="images/client2.jpg" alt="Priya Sharma">
+              <div class="author-info">
+                <h4>Priya Sharma</h4>
+                <p>Delhi, VIP Investor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonials-cta">
+        <button class="btn-primary" onclick="openPlanBModal()">
+          <i class="fas fa-chart-line"></i> Start Investing Today
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <!-- Plan A Modal -->
+  <div id="planAModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" onclick="closeModal('planAModal')">&times;</span>
+      <div class="modal-header">
+        <h2><i class="fas fa-rocket"></i> Wealth Kickstart Plan</h2>
+        <div class="modal-badge">Most Popular</div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-highlight">
+          <div class="highlight-card">
+            <i class="fas fa-rupee-sign"></i>
+            <h4>Minimum Investment</h4>
+            <p>₹1,00,000</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h4>Term Length</h4>
+            <p>20 Months</p>
+          </div>
+          <div class="highlight-card">
+            <i class="fas fa-chart-line"></i>
+            <h4>Total Returns</h4>
+            <p>₹1,40,000</p>
+          </div>
+        </div>
+        
+        <h3>Plan Details</h3>
+        <div class="plan-description">
+          <p>The Wealth Kickstart plan is designed for investors who want steady monthly income while systematically recovering their capital. You'll receive ₹7,000 every month (₹2,000 interest + ₹5,000 capital return) for 20 months.</p>
+        </div>
+        
+        <h3>How It Works</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Monthly Returns</h4>
+              <p>Receive ₹7,000 every month (₹2,000 interest + ₹5,000 capital return)</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Consistent Growth</h4>
+              <p>Steady monthly payments for 20 consecutive months</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>Full Recovery</h4>
+              <p>Your entire capital is returned systematically over the term</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-cta">
+          <button class="invest-now">
+            <i class="fas fa-paper-plane"></i> Invest Now
+          </button>
+          <button class="consult-expert">
+            <i class="fas fa-headset"></i> Talk to an Expert
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
+  <!-- Plan B Modal -->
+  <div id="planBModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" onclick="closeModal('planBModal')">&times;</span>
+      <div class="modal-header">
+        <h2><i class="fas fa-gem"></i> Premium Growth Plan</h2>
+        <div class="modal-badge elite">High Growth</div>
+      </div>
+      <div class="modal-body">
+        <!-- Similar structure as Plan A modal -->
+      </div>
+    </div>
+  </div>
 
+  <!-- Plan C Modal -->
+  <div id="planCModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" onclick="closeModal('planCModal')">&times;</span>
+      <div class="modal-header">
+        <h2><i class="fas fa-crown"></i> VIP Accelerator Plan</h2>
+        <div class="modal-badge vip">Exclusive</div>
+      </div>
+      <div class="modal-body">
+        <!-- Similar structure as Plan A modal -->
+      </div>
+    </div>
+  </div>
 
-
+  <!-- Investment Modal -->
+  <div id="investmentModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close" onclick="closeModal('investmentModal')">&times;</span>
+      <div class="modal-header">
+        <h2><i class="fas fa-file-signature"></i> Investment Application</h2>
+      </div>
+      <div class="modal-body">
+        <form id="investmentForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="selectedPlan">Selected Plan</label>
+            <select id="selectedPlan" required>
+              <option value="">Select a plan</option>
+              <option value="Wealth Kickstart">Wealth Kickstart</option>
+              <option value="Premium Growth">Premium Growth</option>
+              <option value="VIP Accelerator">VIP Accelerator</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="investmentAmount">Investment Amount (₹)</label>
+            <input type="number" id="investmentAmountModal" min="100000" required>
+          </div>
+          
+          <div class="form-submit">
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-paper-plane"></i> Submit Application
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
-  <footer>
-    <p><small>&copy; 2025 The Trading Nomad. All rights reserved.</small></p>
+  <footer class="glass-footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">
+          <img src="images/logo.png" alt="The Trading Nomad Logo">
+          <span>The Trading Nomad</span>
+        </div>
+        <p class="footer-description">Premium investment solutions for discerning investors. Maximize your returns with our expertly managed plans.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Invest</h4>
+          <a href="#">Plans</a>
+          <a href="#">Performance</a>
+          <a href="#">Calculator</a>
+          <a href="#">FAQ</a>
+        </div>
+        
+        <div class="link-group">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Team</a>
+          <a href="#">Careers</a>
+          <a href="#">News</a>
+        </div>
+        
+        <div class="link-group">
+          <h4>Legal</h4>
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Compliance</a>
+          <a href="#">Disclosures</a>
+        </div>
+        
+        <div class="link-group">
+          <h4>Contact</h4>
+          <a href="#">Support</a>
+          <a href="#">Advisors</a>
+          <a href="#">Locations</a>
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 The Trading Nomad. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Risk Disclosure</a>
+      </div>
+    </div>
   </footer>
-  <script>
-    // Function to open the Plan A modal
-    function openPlanAModal() {
-      document.getElementById('planAModal').style.display = 'block';
-    }
-  
-    // Function to close the Plan A modal
-    function closePlanAModal() {
-      document.getElementById('planAModal').style.display = 'none';
-    }
-  
-    // Close modal when clicking outside of the modal content
-    window.onclick = function(event) {
-      var modal = document.getElementById('planAModal');
-      if (event.target == modal) {
-        modal.style.display = 'none';
-      }
-    }
-  </script>
-  
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = "flex";
-    }
-  
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-  
-    // Open Plan B Modal
-function openPlanBModal() {
-  document.getElementById("planBModal").style.display = "block";
-}
 
-// Close Plan B Modal
-function closePlanBModal() {
-  document.getElementById("planBModal").style.display = "none";
-}
-    // Optional: Close modal on outside click
-    window.onclick = function(event) {
-      const planBModal = document.getElementById('planBModal');
-      if (event.target === planBModal) {
-        planBModal.style.display = "none";
-      }
-    }
-  </script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // plans.js - Complete Interactive Functionality for Investment Plans
 
-  
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Particles.js background
+        initParticles();
+        
+        // Set up plan card interactions
+        setupPlanCards();
+        
+        // Initialize calculator functionality
+        initCalculator();
+        
+        // Set up modal interactions
+        setupModals();
+        
+        // Add smooth scrolling
+        setupSmoothScrolling();
+        
+        // Add animation triggers
+        setupAnimations();
+      });
+      
+      // ======================
+      // 1. Particles Background
+      // ======================
+      function initParticles() {
+        if (document.getElementById('particles-js')) {
+          particlesJS('particles-js', {
+            particles: {
+              number: { value: 80, density: { enable: true, value_area: 800 } },
+              color: { value: "#6c5ce7" },
+              shape: { type: "circle" },
+              opacity: { value: 0.5, random: true },
+              size: { value: 3, random: true },
+              line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#6c5ce7",
+                opacity: 0.4,
+                width: 1
+              },
+              move: {
+                enable: true,
+                speed: 2,
+                direction: "none",
+                random: true,
+                straight: false,
+                out_mode: "out"
+              }
+            },
+            interactivity: {
+              detect_on: "canvas",
+              events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "push" },
+                resize: true
+              }
+            },
+            retina_detect: true
+          });
+        }
+      }
+      
+      // ======================
+      // 2. Plan Cards Interactions
+      // ======================
+      function setupPlanCards() {
+        const planCards = document.querySelectorAll('.plan-card');
+        
+        planCards.forEach(card => {
+          // Hover effects
+          card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+            this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.2)';
+            
+            // Add pulse animation to the tag
+            const tag = this.querySelector('.plan-tag');
+            if (tag) {
+              tag.style.animation = 'pulse 2s infinite';
+            }
+          });
+          
+          card.addEventListener('mouseleave', function() {
+            this.style.transform = '';
+            this.style.boxShadow = '';
+            
+            // Remove pulse animation
+            const tag = this.querySelector('.plan-tag');
+            if (tag) {
+              tag.style.animation = '';
+            }
+          });
+          
+          // Click effect
+          card.addEventListener('click', function() {
+            this.style.transform = 'scale(0.98)';
+            setTimeout(() => {
+              this.style.transform = 'translateY(-10px)';
+            }, 200);
+          });
+        });
+      }
+      
+      // ======================
+      // 3. Investment Calculator
+      // ======================
+      function initCalculator() {
+        const calculator = document.querySelector('.calculator');
+        if (!calculator) return;
+        
+        const amountSlider = calculator.querySelector('#investmentAmount');
+        const amountDisplay = calculator.querySelector('#amountDisplay');
+        const planSelect = calculator.querySelector('#planSelect');
+        const resultsDisplay = calculator.querySelector('#calculatorResults');
+        
+        // Update amount display when slider moves
+        amountSlider.addEventListener('input', function() {
+          const amount = parseInt(this.value);
+          amountDisplay.textContent = formatCurrency(amount);
+          updateCalculatorResults();
+        });
+        
+        // Update results when plan changes
+        planSelect.addEventListener('change', updateCalculatorResults);
+        
+        function updateCalculatorResults() {
+          const amount = parseInt(amountSlider.value);
+          const plan = planSelect.value;
+          
+          let resultText = '';
+          let monthlyReturn = 0;
+          let totalReturn = 0;
+          let term = 0;
+          
+          switch(plan) {
+            case 'planA':
+              monthlyReturn = amount * 0.07; // 2% + 5%
+              totalReturn = monthlyReturn * 20;
+              term = '20 months';
+              break;
+            case 'planB':
+              monthlyReturn = amount * 0.03;
+              totalReturn = (monthlyReturn * 18) + amount;
+              term = '18 months';
+              break;
+            case 'planC':
+              monthlyReturn = amount * 0.04;
+              // VIP plan has quarterly bonuses (simplified as 1% bonus every 3 months)
+              const quarterlyBonus = amount * 0.01 * 8; // 8 quarters in 24 months
+              totalReturn = (monthlyReturn * 24) + amount + quarterlyBonus;
+              term = '24 months';
+              break;
+          }
+          
+          resultText = `
+            <div class="calc-result">
+              <div class="calc-metric">
+                <span>Monthly Return</span>
+                <strong>${formatCurrency(monthlyReturn)}</strong>
+              </div>
+              <div class="calc-metric">
+                <span>Total Return</span>
+                <strong>${formatCurrency(totalReturn)}</strong>
+              </div>
+              <div class="calc-metric">
+                <span>Term Length</span>
+                <strong>${term}</strong>
+              </div>
+            </div>
+          `;
+          
+          resultsDisplay.innerHTML = resultText;
+        }
+        
+        // Format currency for display
+        function formatCurrency(amount) {
+          return '₹' + amount.toLocaleString('en-IN');
+        }
+        
+        // Initialize calculator
+        updateCalculatorResults();
+      }
+      
+      // ======================
+      // 4. Modal Management
+      // ======================
+      function setupModals() {
+        // Open modal functions
+        window.openPlanAModal = function() {
+          showModal('planAModal');
+        };
+        
+        window.openPlanBModal = function() {
+          showModal('planBModal');
+        };
+        
+        window.openPlanCModal = function() {
+          showModal('planCModal');
+        };
+        
+        // Close modal functions
+        window.closeModal = function(modalId) {
+          document.getElementById(modalId).style.display = 'none';
+          document.body.style.overflow = 'auto';
+        };
+        
+        // Close when clicking outside modal content
+        window.onclick = function(event) {
+          if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
+          }
+        };
+        
+        // Close with Escape key
+        document.addEventListener('keydown', function(event) {
+          if (event.key === 'Escape') {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+              if (modal.style.display === 'flex') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+              }
+            });
+          }
+        });
+        
+        function showModal(modalId) {
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Focus on first interactive element for accessibility
+            const focusable = modal.querySelector('button, [href], input, select, textarea');
+            if (focusable) focusable.focus();
+          }
+        }
+      }
+      
+      // ======================
+      // 5. Smooth Scrolling
+      // ======================
+      function setupSmoothScrolling() {
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      }
+      
+      // ======================
+      // 6. Animations
+      // ======================
+      function setupAnimations() {
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('animate-in');
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+        
+        // Observe elements with animation class
+        document.querySelectorAll('.plan-card, .comparison-section, .timeline-item').forEach(el => {
+          observer.observe(el);
+        });
+        
+        // Add CSS animation class
+        const style = document.createElement('style');
+        style.textContent = `
+          .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+          }
+          
+          @keyframes fadeInUp {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+      
+      // ======================
+      // 7. Form Submission Handling
+      // ======================
+      function setupFormHandlers() {
+        const investForms = document.querySelectorAll('.invest-now, .consult-expert');
+        
+        investForms.forEach(form => {
+          form.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, this would submit to your backend
+            const planName = this.closest('.modal-content').querySelector('h2').textContent;
+            
+            // Show success message
+            const successMsg = document.createElement('div');
+            successMsg.className = 'success-message';
+            successMsg.innerHTML = `
+              <i class="fas fa-check-circle"></i>
+              <p>Thank you for your interest in ${planName}!</p>
+              <p>Our team will contact you shortly.</p>
+            `;
+            
+            // Insert before the buttons
+            const modalCta = this.closest('.modal-cta');
+            modalCta.parentNode.insertBefore(successMsg, modalCta);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+              successMsg.remove();
+            }, 5000);
+          });
+        });
+      }
+      
+      // Initialize form handlers when DOM is loaded
+      document.addEventListener('DOMContentLoaded', setupFormHandlers);
+  </script>
 </body>
 </html>
