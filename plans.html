@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investment Plans | Visharad Forex</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">The Trading Nomad</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="plans.html" class="active">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="plans-header">
+    <h1>Explore Investment Plans</h1>
+    <p>Select the plan that suits your financial goals.</p>
+  </section>
+
+  <!-- Plans Section (Plan A Card) -->
+<section class="plans-section">
+  <div class="plan-card">
+    <div class="plan-icon"><i class="fas fa-chart-line"></i></div>
+    <h2>Wealth Kickstart</h2>
+    <p class="placeholder">Earn steady monthly returns while getting your capital back safely over 20 months.</p>
+    <a href="javascript:void(0)" class="plan-btn" onclick="openPlanAModal()">Get Started</a>
+  </div>
+
+  <div class="plan-card">
+    <div class="plan-icon"><i class="fas fa-coins"></i></div>
+    <h2>Premium Growth</h2>
+    <p class="placeholder">A high-growth plan offering steady monthly returns with the added security of full capital return at the end of the term.</p>
+    <button onclick="openModal('planBModal')" class="plan-button">Get Started</button>
+
+  </div>
+</section>
+
+<!-- Modal for Plan A -->
+<div id="planAModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePlanAModal()">&times;</span>
+    <h2>Plan A: Wealth Kickstart</h2>
+    <p><strong>Minimum Investment:</strong> ₹1,00,000</p>
+    <h3>Monthly Return Structure</h3>
+    <ul class="modal-points">
+      <li><strong>Interest:</strong> Earn 2% (₹2,000 on a ₹1,00,000 investment) every month.</li>
+      <li><strong>Capital Return:</strong> Receive an additional 5% (₹5,000) of your initial capital monthly.</li>
+    </ul>
+    <p><strong>Total Monthly Payment:</strong> A combined sum of ₹7,000 is credited every month.</p>
+    <p>This amount will be paid for 20 consecutive months, ensuring that by the end of the term your total returns equal ₹1,40,000 – which includes both your monthly earnings and the gradual return of your initial investment.</p>
+    <p><strong>Key Benefits:</strong></p>
+    <ul class="modal-points">
+      <li>Regular monthly returns combining interest earnings with a systematic capital recovery.</li>
+      <li>Enhanced liquidity – receive a portion of your investment back each month.</li>
+      <li>At the conclusion of 20 months, your full principal investment is safely returned along with the accrued returns.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Plan B Modal -->
+<div id="planBModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePlanBModal()">&times;</span>
+    <h2>Plan B – Premium Growth</h2>
+    <p><strong>Minimum Investment:</strong> ₹1,00,000</p>
+    <p>
+      In this plan, you will receive a <strong>3% return on your invested amount every month</strong> for a total duration of <strong>18 months</strong>.
+      That means, for an investment of ₹1,00,000, you will receive ₹3,000 monthly.
+    </p>
+    <p>
+      Over 18 months, this totals to ₹54,000 in returns. At the end of the 18-month term, you will also receive your entire capital of ₹1,00,000 back.
+    </p>
+    <p>
+      <strong>Note:</strong> There is a <strong>lock-in period of 12 months</strong>. You cannot withdraw your capital before completing 12 months.
+    </p>
+    <ul style="margin-top: 15px; line-height: 1.8;">
+      <li><strong>Monthly Return:</strong> ₹3,000 (3%)</li>
+      <li><strong>Duration:</strong> 18 months</li>
+      <li><strong>Total Return:</strong> ₹54,000 + Full Capital Returned at End</li>
+      <li><strong>Key Benefit:</strong> Over 50% ROI with capital safety</li>
+      <li><strong>Lock-in Period:</strong> 12 months minimum</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p><small>&copy; 2025 The Trading Nomad. All rights reserved.</small></p>
+  </footer>
+  <script>
+    // Function to open the Plan A modal
+    function openPlanAModal() {
+      document.getElementById('planAModal').style.display = 'block';
+    }
+  
+    // Function to close the Plan A modal
+    function closePlanAModal() {
+      document.getElementById('planAModal').style.display = 'none';
+    }
+  
+    // Close modal when clicking outside of the modal content
+    window.onclick = function(event) {
+      var modal = document.getElementById('planAModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  </script>
+  
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "flex";
+    }
+  
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  
+    // Open Plan B Modal
+function openPlanBModal() {
+  document.getElementById("planBModal").style.display = "block";
+}
+
+// Close Plan B Modal
+function closePlanBModal() {
+  document.getElementById("planBModal").style.display = "none";
+}
+    // Optional: Close modal on outside click
+    window.onclick = function(event) {
+      const planBModal = document.getElementById('planBModal');
+      if (event.target === planBModal) {
+        planBModal.style.display = "none";
+      }
+    }
+  </script>
+
+  
+</body>
+</html>
