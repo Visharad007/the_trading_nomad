@@ -1,64 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact | Visharad Forex</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | The Trading Nomad</title>
+  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
 </head>
 <body>
-  <!-- Header/Navbar -->
-  <header class="navbar">
-    <div class="logo">The Trading Nomad</div>
+  <!-- Animated Background -->
+  <div class="particles" id="particles-js"></div>
+  
+  <!-- Navigation -->
+  <header class="glass-nav">
+    <div class="logo">
+      <img src="images/logo.png" alt="The Trading Nomad Logo" class="logo-img">
+      <span class="logo-text">The Trading Nomad</span>
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="plans.html">Plans</a></li>
-        <li><a href="contacts.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Contact Form Section -->
-  <main class="contact-page">
-    <div class="contact-container">
-      <h2>Contact Me</h2>
-      <p>Have a question or want to get started with investing? Send me a message below.</p>
-
-      <form id="contactForm">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="Your full name" required>
-
-        <label for="phone">Contact Number</label>
-        <input type="tel" id="phone" placeholder="+91 9876543210" required>
-
-        <label for="email">Email ID</label>
-        <input type="email" id="email" placeholder="your@email.com" required>
-
-        <label for="message">Description</label>
-        <textarea id="message" rows="5" placeholder="Write your query here..." required></textarea>
-
-        <button type="submit" class="submit-btn">Submit</button>
-      </form>
-
-      <!-- Contact Info -->
-      <!-- Contact Info -->
-<div class="contact-info">
-    <p><i class="fab fa-whatsapp whatsapp-icon"></i> <strong>WhatsApp:</strong> +91-8788942146</p>
-    <p><i class="fas fa-envelope email-icon"></i> <strong>Email:</strong> vishufxpro@gmail.com</p>
-    <p><i class="fab fa-instagram instagram-icon"></i> <strong>Instagram:</strong> the_trading_nomad</p>
-  </div>
-  
+  <!-- Hero Section -->
+  <!-- <section class="contact-hero">
+    <div class="hero-content">
+      <h1 class="gradient-text">Get in <span>Touch</span></h1>
+      <p class="hero-subtitle">Our team is ready to assist you with any questions about our investment plans</p>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
     </div>
-  </main>
+  </section> -->
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="section-header">
+      <h2>Get in <span>Touch</span></h2>
+      <p>Reach out to our investment specialists for personalized advice</p>
+    </div>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Our Office</h4>
+            <p>123 Financial District, Mumbai, India 400001</p>
+          </div>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Phone</h4>
+            <p><a href="tel:+912212345678">+91 22 1234 5678</a></p>
+            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Email</h4>
+            <p><a href="mailto:info@tradingnomad.com">info@tradingnomad.com</a></p>
+            <p><a href="mailto:support@tradingnomad.com">support@tradingnomad.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-method">
+          <div class="contact-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <div class="contact-details">
+            <h4>Working Hours</h4>
+            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+            <p>Saturday: 10:00 AM - 2:00 PM</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject">
+              <option value="">Select a subject</option>
+              <option value="investment">Investment Inquiry</option>
+              <option value="support">Technical Support</option>
+              <option value="partnership">Partnership Opportunities</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+          <i class="fas fa-check-circle"></i>
+          <p>Thank you for your message!</p>
+          <p>We'll get back to you within 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="section-header">
+      <h2>Find <span>Us</span></h2>
+      <p>Visit our office for a personal consultation</p>
+    </div>
+    
+    <div class="map-container">
+      <!-- Google Maps Embed -->
+      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.715560064111!2d72.8246403153766!3d19.05123445794858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8df05b9e645%3A0x1d1c5b1b5b1b5b1b!2sFinancial%20District%2C%20Mumbai%2C%20Maharashtra%20400001!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"  -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d556.7041221863886!2d73.99134482854733!3d20.17389317515456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1744710199266!5m2!1sen!2sin"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"></iframe>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer>
-    <p><small>&copy; 2025 The Trading Nomad. All rights reserved.</small></p>
+  <footer class="glass-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="The Trading Nomad Logo">
+        <span>The Trading Nomad</span>
+      </div>
+      <div class="footer-links">
+        <div class="link-group">
+          <h4>Invest</h4>
+          <a href="plans.html">Plans</a>
+          <a href="#">Performance</a>
+          <a href="#">Calculator</a>
+        </div>
+        <div class="link-group">
+          <h4>Company</h4>
+          <a href="about.html">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">News</a>
+        </div>
+        <div class="link-group">
+          <h4>Support</h4>
+          <a href="#">Help Center</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Legal</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 The Trading Nomad. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/contact.js"></script>
+  
 </body>
 </html>
